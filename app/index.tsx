@@ -1,11 +1,12 @@
 import CustomButton from "@/components/Title";
 import React, { useState } from "react";
+import { useRouter } from "expo-router";
 import { Button, Text, TextInput, View } from "react-native";
 import Form from "@/components/Form";
 
 export default function HomeScreen(){
-    const name = "Gabriel";
-
+    const name = "Ele";
+    const router = useRouter();
     const [count, setCount] = useState(0);
     const [nome, setNome] = useState(name);
     const STARVALUE = 0
@@ -27,14 +28,23 @@ export default function HomeScreen(){
             <Button title="Reset" onPress={() => {setCount(STARVALUE)}}/>
 
             <TextInput placeholder="digita ai mano" onChangeText={setNome}/>
-           <CustomButton title="Bota Vermeia" onPress={() => {setNome('Gabs ' + count)}}/>
+           <CustomButton title="Bota Vermeia" onPress={() => {setNome('Ele ' + count)}}/>
 
 
            
             <TextInput placeholder="Nome"/>
-            <CustomButton title="Login" onPress={() => {setNome('Gabs ' + count)}}/>
+            <CustomButton title="Login" onPress={() => {setNome('Ele ' + count)}}/>
             
             <Form/>  
         </View>
+    );
+    return (
+        <View>
+            <Text> teste </Text>
+           
+            <Button 
+            title="Personagens" 
+            onPress={() => router.push('/characters/')}/>
+        </View> 
     );
 }
