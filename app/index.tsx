@@ -1,50 +1,20 @@
-import CustomButton from "@/components/Title";
 import React, { useState } from "react";
 import { useRouter } from "expo-router";
 import { Button, Text, TextInput, View } from "react-native";
-import Form from "@/components/Form";
 
 export default function HomeScreen(){
-    const name = "Ele";
-    const router = useRouter();
-    const [count, setCount] = useState(0);
-    const [nome, setNome] = useState(name);
-    const STARVALUE = 0
-
-    
-
-    function alterarCount (value:number){
-        setCount(count + value);
-    }
-
-
-    return (
-        <View style={{flex: 1, justifyContent: "center", alignItems:"center"}}>
-            <Text>Bem vindo, {nome} </Text>
-
-            <Text>Contador: {count}</Text>
-            <Button title="Jogar!" onPress={() => {alterarCount(+1)}}/> 
-            <Button title="Diminuir" onPress={() => {alterarCount(-1)}}/> 
-            <Button title="Reset" onPress={() => {setCount(STARVALUE)}}/>
-
-            <TextInput placeholder="digita ai mano" onChangeText={setNome}/>
-           <CustomButton title="Bota Vermeia" onPress={() => {setNome('Ele ' + count)}}/>
-
-
-           
-            <TextInput placeholder="Nome"/>
-            <CustomButton title="Login" onPress={() => {setNome('Ele ' + count)}}/>
-            
-            <Form/>  
-        </View>
-    );
-    return (
-        <View>
-            <Text> teste </Text>
-           
-            <Button 
-            title="Personagens" 
-            onPress={() => router.push('/characters/')}/>
-        </View> 
-    );
+ const router = useRouter();
+ return (
+    <View>
+        <Button title="Stack Navigation"
+        onPress={() => router.push('/navigation/stack/index')}
+        />
+        <Button title="Tab Navigation"
+        onPress={() => router.push('C:\Users\Tecnico\Desktop\Aplic\aplic\app\navigation\tabs\index.tsx')}
+        />
+        <Button title="Drawer Navigation"
+        onPress={() => router.push('/navigation/drawer')}
+        />
+    </View>
+ )
 }
