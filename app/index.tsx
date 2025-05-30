@@ -7,10 +7,10 @@ export default function HomeScreen(){
  return (
     <View>
         <Button title="Stack Navigation"
-        onPress={() => router.push('/navigation/stack/index')}
+        onPress={() => router.push('/navigation/stack')}
         />
         <Button title="Tab Navigation"
-        onPress={() => router.push('C:\Users\Tecnico\Desktop\Aplic\aplic\app\navigation\tabs\index.tsx')}
+        onPress={() => router.push('/navigation/tabs')}
         />
         <Button title="Drawer Navigation"
         onPress={() => router.push('/navigation/drawer')}

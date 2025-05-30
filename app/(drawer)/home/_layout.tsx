@@ -4,18 +4,18 @@ export default function DrawerLayout() {
     return (
         <Drawer>
             <Drawer.Screen
-            name='home'
-            options={{
-                drawerLabel: 'Home',
-                title: 'Início'
-            }}
+                name='home'
+                options={{
+                    drawerLabel: 'Home',
+                    title: 'Início'
+                }}
             />
             <Drawer.Screen
-            name='settings/index'
-            options={{
-                drawerLabel: 'Settings',
-                title: 'Configuração'
-            }}
+                name='settings/index'
+                options={{
+                    drawerLabel: 'Settings',
+                    title: 'Configuração'
+                }}
             />
         </Drawer>
     )

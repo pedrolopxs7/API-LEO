@@ -1,5 +1,9 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 export default function StackDetail() {
-    return <Text>Detalhes</Text>;
+    return (
+        <View>
+            <Text>Detalhes</Text>
+        </View>
+    );
 }
